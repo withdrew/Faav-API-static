@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>docs for faav.gapple.pw | Profiles API</title>
+    <link href="https://cdn.jsdelivr.net/gh/KrauseFx/markdown-to-html-github-style@master/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1 id="profiles-api-routes">Profiles API Routes</h1>
+    <p>This API uses laby.net’s database if a user doesnt appear in this API its because laby.net hasn’t cached the account yet. These docs aim to serve as a guide on how to use this API and what responses can possibly be returned.</p>
+    <h3 id="get-profilesusername"><code>GET /profiles/:username</code></h3>
+    <p>This is currently the only endpoint for this API.</p>
+    <h3 id="possible-responses">Possible responses</h3>
+    <p>Here are the different responses that can be returned:</p>
+    <p><strong>Profiles Found / HTTP <code>200</code>:</strong></p>
+    <div>
+      <div>
+        <pre><code class="json language-json">{
+  "profiles": [
+    {
+      "username": "Ask",
+      "uuid": "b143b358-e068-4dfa-b292-0b417d01b2db",
+      "username_history": [
+        {
+          "username": "Ask"
+        }
+      ]
+    },
+    {
+      "username": "Bukon",
+      "uuid": "19682311-cba0-4b8c-bd6b-5f0e37d8cf24",
+      "username_history": [
+        {
+          "username": "Bukon",
+          "changed_at": "2020-08-12T21:53:25.000Z"
+        },
+        {
+          "username": "BukisonRae",
+          "changed_at": "2020-06-05T20:32:29.000Z"
+        },
+        {
+          "username": "ThePixelDamage",
+          "changed_at": "2015-09-29T04:42:31.000Z"
+        },
+        {
+          "username": "ThePixelDamageXZ",
+          "changed_at": "2015-07-27T12:43:23.000Z"
+        },
+        {
+          "username": "Ask",
+          "changed_at": "2015-06-08T02:57:38.000Z"
+        },
+        {
+          "username": "axzsa"
+        }
+      ]
+    }
+  ]
+}</code></pre>
+      </div>
+    </div>
+    <p><strong>Profiles Not Found / HTTP <code>404</code></strong>:</p>
+    <div class="language-json highlighter-rouge">
+      <div>
+        <pre><code class="json language-json">{
+  "profiles": []
+}</code></pre>
+      </div>
+    </div>
+    <p>Copyright <a href="https://github.com/withdrew">Faav</a> 2021, all rights reserved.</p>
+  </body>
+</html>

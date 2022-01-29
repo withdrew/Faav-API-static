@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>docs for faav.gapple.pw | Laby API</title>
+    <link href="https://cdn.jsdelivr.net/gh/KrauseFx/markdown-to-html-github-style@master/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1 id="laby-api-routes">Laby API Routes</h1>
+    <p>This API uses laby.net’s database. These docs aim to serve as a guide on how to use this API and what responses can possibly be returned.</p>
+    <h3 id="get-labyusernameuuidstats"><code>GET /laby/:username|uuid/stats</code></h3>
+    <h3 id="possible-responses">Possible responses</h3>
+    <p>Here are the different responses that can be returned:</p>
+    <p><strong>Displays All Stats / HTTP <code>200</code>:</strong></p>
+    <div>
+      <div>
+        <pre><code class="json language-json">{
+  "first_joined": "2015-12-04",
+  "last_online": "2021-07-16",
+  "playtime": {
+    "duration": "2622",
+    "average": "375",
+    "streak": 3
+  },
+  "most_played_server": {
+    "nice_name": "play.roxbot.com",
+    "server_name": "play.roxbot.com",
+    "direct_ip": "play.roxbot.com",
+    "sumduration": "75258",
+    "servergroup": "0"
+  }
+}</code></pre>
+      </div>
+    </div>
+    <p><strong>No stats found / HTTP <code>404</code>:</strong></p>
+    <div>
+      <div>
+        <pre><code class="json language-json">{
+  "error": "no_stats_found"
+}</code></pre>
+      </div>
+    </div>
+    <p><strong>User not found / HTTP <code>404</code>:</strong></p>
+    <div>
+      <div>
+        <pre><code class="json language-json">{
+  "error": "user_not_found"
+}</code></pre>
+      </div>
+    </div>
+    /*<h3 id="get-labyusernameuuidfriends"><code>GET /laby/:username|uuid/friends</code></h3>
+    <h3 id="possible-responses-1">Possible responses</h3>
+    <p>Here are the different responses that can be returned:</p>
+    <p><strong>Displays All Friends / HTTP <code>200</code>:</strong></p>
+    <div>
+      <div>
+        <pre><code class="json language-json">{
+  "friends": [
+    {
+      "username": "zsg",
+      "uuid": "bc772d9f-94ea-449c-a87a-fa588fa32a90",
+      "color": "#AA00AA",
+      "mc_color": "§5"
+    },
+    {
+      "username": "babyMart",
+      "uuid": "64b961d7-0ab7-47d4-be68-1ea98e915dba",
+      "color": null,
+      "mc_color": null
+    }
+  ]
+}</code></pre>
+      </div>
+    </div>
+    <p><strong>No friends found / HTTP <code>404</code>:</strong></p>
+    <div>
+      <div>
+        <pre><code class="json language-json">{
+  "error": "no_friends_found"
+}</code></pre>
+      </div>
+    </div>
+    <p><strong>User not found / HTTP <code>404</code>:</strong></p>
+    <div>
+      <div>
+        <pre><code class="json language-json">{
+  "error": "user_not_found"
+}</code></pre>
+      </div>
+    </div>*/
+    <h3 id="get-labyusernameuuidtextures"><code>GET /laby/:username|uuid/textures</code></h3>
+    <h3 id="possible-responses-2">Possible responses</h3>
+    <p>Here are the different responses that can be returned:</p>
+    <p><strong>Displays Textures / HTTP <code>200</code>:</strong></p>
+    <div>
+      <div>
+        <pre><code class="json language-json">{
+  "skins": [
+    {
+      "texture": "https://laby.net/texture/image/ad3d57a7c754eb8cabcaace0f6b45e05.png",
+      "cropped_texture": "https://laby.net/image/head/ad3d57a7c754eb8cabcaace0f6b45e05.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/ad3d57a7c754eb8cabcaace0f6b45e05",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/head/ad3d57a7c754eb8cabcaace0f6b45e05"
+      }
+    }
+  ],
+  "capes": [
+    {
+      "type": "official",
+      "texture": "https://laby.net/texture/image/de4a8ad0267f4fc0f41a732ebcf10ec9.png",
+      "cropped_texture": "https://laby.net/texture/cape/de4a8ad0267f4fc0f41a732ebcf10ec9.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/de4a8ad0267f4fc0f41a732ebcf10ec9",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/de4a8ad0267f4fc0f41a732ebcf10ec9"
+      }
+    },
+    {
+      "type": "labymod",
+      "texture": "https://laby.net/texture/image/d13223f140e5d21d7b0967a04642b99f.png",
+      "cropped_texture": "https://laby.net/texture/cape/d13223f140e5d21d7b0967a04642b99f.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/d13223f140e5d21d7b0967a04642b99f",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/d13223f140e5d21d7b0967a04642b99f"
+      }
+    }
+  ],
+    "bandanas": [
+    {
+      "texture": "https://laby.net/texture/image/ac411cf2c90293d4562c679f6299f655.png",
+      "cropped_texture": "https://laby.net/texture/bandana/ac411cf2c90293d4562c679f6299f655.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/ac411cf2c90293d4562c679f6299f655",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/bandana/ac411cf2c90293d4562c679f6299f655"
+      }
+    }
+  ]
+}</code></pre>
+      </div>
+    </div>
+    <h3 id="get-labyusernameuuidstatus"><code>GET /laby/:username|uuid/status</code></h3>
+    <h3 id="possible-responses-3">Possible responses</h3>
+    <p>Here are the different responses that can be returned:</p>
+    <p><strong>Displays The Users Status / HTTP <code>200</code>:</strong></p>
+    <div>
+      <div>
+        <pre><code class="json language-json">// User is online 
+{
+  "status": "online"
+}
+// User is offline
+{
+  "status": "offline"
+}</code></pre>
+      </div>
+    </div>
+    <p><strong>User not found / HTTP <code>404</code>:</strong></p>
+    <div>
+      <div>
+        <pre><code class="json language-json">{
+  "error": "user_not_found"
+}</code></pre>
+      </div>
+    </div>
+        <h3><code>GET /laby-capes</code></h3>
+    <h3 id="possible-responses-3">Possible responses</h3>
+    <p>Here are the different responses that can be returned:</p>
+    <p><strong>Displays All Capes (Sorted by Cape Count from Highest to Lowest) / HTTP <code>200</code>:</strong></p>
+    <div>
+      <div>
+        <pre><code class="json language-json">{
+  "capes": [
+    {
+      "name": "Migrator",
+      "texture": "https://laby.net/texture/image/5b37a01fde6a3e075f3bc5694c18e667.png",
+      "cropped_texture": "https://laby.net/texture/cape/5b37a01fde6a3e075f3bc5694c18e667.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/5b37a01fde6a3e075f3bc5694c18e667",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/5b37a01fde6a3e075f3bc5694c18e667"
+      },
+      "hash": "5b37a01fde6a3e075f3bc5694c18e667",
+      "count": 9602
+    },
+    {
+      "name": "MineCon 2016",
+      "texture": "https://laby.net/texture/image/de4a8ad0267f4fc0f41a732ebcf10ec9.png",
+      "cropped_texture": "https://laby.net/texture/cape/de4a8ad0267f4fc0f41a732ebcf10ec9.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/de4a8ad0267f4fc0f41a732ebcf10ec9",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/de4a8ad0267f4fc0f41a732ebcf10ec9"
+      },
+      "hash": "de4a8ad0267f4fc0f41a732ebcf10ec9",
+      "count": 5735
+    },
+    {
+      "name": "MineCon 2012",
+      "texture": "https://laby.net/texture/image/2b7ccdbfd1d89520f335822140d83d52.png",
+      "cropped_texture": "https://laby.net/texture/cape/2b7ccdbfd1d89520f335822140d83d52.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/2b7ccdbfd1d89520f335822140d83d52",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/2b7ccdbfd1d89520f335822140d83d52"
+      },
+      "hash": "2b7ccdbfd1d89520f335822140d83d52",
+      "count": 2943
+    },
+    {
+      "name": "MineCon 2015",
+      "texture": "https://laby.net/texture/image/4d1709d6e62c99ec7220e0787df0362e.png",
+      "cropped_texture": "https://laby.net/texture/cape/4d1709d6e62c99ec7220e0787df0362e.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/4d1709d6e62c99ec7220e0787df0362e",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/4d1709d6e62c99ec7220e0787df0362e"
+      },
+      "hash": "4d1709d6e62c99ec7220e0787df0362e",
+      "count": 4789
+    },
+    {
+      "name": "MineCon 2013",
+      "texture": "https://laby.net/texture/image/37cd76a8a0879233398d127099326cb7.png",
+      "cropped_texture": "https://laby.net/texture/cape/37cd76a8a0879233398d127099326cb7.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/37cd76a8a0879233398d127099326cb7",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/37cd76a8a0879233398d127099326cb7"
+      },
+      "hash": "37cd76a8a0879233398d127099326cb7",
+      "count": 5390
+    },
+    {
+      "name": "Mojang",
+      "texture": "https://laby.net/texture/image/6390c54ca1e541a75235dadf23555ed2.png",
+      "cropped_texture": "https://laby.net/texture/cape/6390c54ca1e541a75235dadf23555ed2.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/6390c54ca1e541a75235dadf23555ed2",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/6390c54ca1e541a75235dadf23555ed2"
+      },
+      "hash": "6390c54ca1e541a75235dadf23555ed2",
+      "count": 136
+    },
+    {
+      "name": "Realms Mapmaker",
+      "texture": "https://laby.net/texture/image/492d8392bf27b659897752dca6de7778.png",
+      "cropped_texture": "https://laby.net/texture/cape/492d8392bf27b659897752dca6de7778.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/492d8392bf27b659897752dca6de7778",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/492d8392bf27b659897752dca6de7778"
+      },
+      "hash": "492d8392bf27b659897752dca6de7778",
+      "count": 226
+    },
+    {
+      "name": "MineCon 2011",
+      "texture": "https://laby.net/texture/image/00f15c80c9ab3540477210d4e58af337.png",
+      "cropped_texture": "https://laby.net/texture/cape/00f15c80c9ab3540477210d4e58af337.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/00f15c80c9ab3540477210d4e58af337",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/00f15c80c9ab3540477210d4e58af337"
+      },
+      "hash": "00f15c80c9ab3540477210d4e58af337",
+      "count": 2422
+    },
+    {
+      "name": "Mojang Studios",
+      "texture": "https://laby.net/texture/image/8fb7780634ea6c0729fea7a7e6f50c28.png",
+      "cropped_texture": "https://laby.net/texture/cape/8fb7780634ea6c0729fea7a7e6f50c28.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/8fb7780634ea6c0729fea7a7e6f50c28",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/8fb7780634ea6c0729fea7a7e6f50c28"
+      },
+      "hash": "8fb7780634ea6c0729fea7a7e6f50c28",
+      "count": 7
+    },
+    {
+      "name": "Translator",
+      "texture": "https://laby.net/texture/image/a944bd437bb6d12822f740c55ee1a3c9.png",
+      "cropped_texture": "https://laby.net/texture/cape/a944bd437bb6d12822f740c55ee1a3c9.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/a944bd437bb6d12822f740c55ee1a3c9",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/a944bd437bb6d12822f740c55ee1a3c9"
+      },
+      "hash": "a944bd437bb6d12822f740c55ee1a3c9",
+      "count": 82
+    },
+    {
+      "name": "Mojira Moderator",
+      "texture": "https://laby.net/texture/image/172e4e9fd6c0afdf086b8bdb58c0bad5.png",
+      "cropped_texture": "https://laby.net/texture/cape/172e4e9fd6c0afdf086b8bdb58c0bad5.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/172e4e9fd6c0afdf086b8bdb58c0bad5",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/172e4e9fd6c0afdf086b8bdb58c0bad5"
+      },
+      "hash": "172e4e9fd6c0afdf086b8bdb58c0bad5",
+      "count": 45
+    },
+    {
+      "name": "Cobalt",
+      "texture": "https://laby.net/texture/image/bd64503808bc49c8d80e327754894d4f.png",
+      "cropped_texture": "https://laby.net/texture/cape/bd64503808bc49c8d80e327754894d4f.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/bd64503808bc49c8d80e327754894d4f",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/bd64503808bc49c8d80e327754894d4f"
+      },
+      "hash": "bd64503808bc49c8d80e327754894d4f",
+      "count": 15
+    },
+    {
+      "name": "Birthday",
+      "texture": "https://laby.net/texture/image/04ddcbd316ec68364238697174fb1c61.png",
+      "cropped_texture": "https://laby.net/texture/cape/04ddcbd316ec68364238697174fb1c61.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/04ddcbd316ec68364238697174fb1c61",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/04ddcbd316ec68364238697174fb1c61"
+      },
+      "hash": "04ddcbd316ec68364238697174fb1c61",
+      "count": 1
+    },
+    {
+      "name": "Turtle",
+      "texture": "https://laby.net/texture/image/22923c6efb6deee96bd7ecd87086bbb8.png",
+      "cropped_texture": "https://laby.net/texture/cape/22923c6efb6deee96bd7ecd87086bbb8.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/22923c6efb6deee96bd7ecd87086bbb8",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/22923c6efb6deee96bd7ecd87086bbb8"
+      },
+      "hash": "22923c6efb6deee96bd7ecd87086bbb8",
+      "count": 1
+    },
+    {
+      "name": "Translator (Japanese)",
+      "texture": "https://laby.net/texture/image/008daa52d7b3e61b686f7cafa3680c0f.png",
+      "cropped_texture": "https://laby.net/texture/cape/008daa52d7b3e61b686f7cafa3680c0f.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/008daa52d7b3e61b686f7cafa3680c0f",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/008daa52d7b3e61b686f7cafa3680c0f"
+      },
+      "hash": "008daa52d7b3e61b686f7cafa3680c0f",
+      "count": 1
+    },
+    {
+      "name": "Spade",
+      "texture": "https://laby.net/texture/image/f0b8db3ae2d2857c6d262fcbc2aa4737.png",
+      "cropped_texture": "https://laby.net/texture/cape/f0b8db3ae2d2857c6d262fcbc2aa4737.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/f0b8db3ae2d2857c6d262fcbc2aa4737",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/f0b8db3ae2d2857c6d262fcbc2aa4737"
+      },
+      "hash": "f0b8db3ae2d2857c6d262fcbc2aa4737",
+      "count": 1
+    },
+    {
+      "name": "Snowman",
+      "texture": "https://laby.net/texture/image/11d612359690be9bebada848ff318e40.png",
+      "cropped_texture": "https://laby.net/texture/cape/11d612359690be9bebada848ff318e40.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/11d612359690be9bebada848ff318e40",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/11d612359690be9bebada848ff318e40"
+      },
+      "hash": "11d612359690be9bebada848ff318e40",
+      "count": 1
+    },
+    {
+      "name": "Millionth Customer",
+      "texture": "https://laby.net/texture/image/47d30b5dd95e65e696fc9ff186d8ee33.png",
+      "cropped_texture": "https://laby.net/texture/cape/47d30b5dd95e65e696fc9ff186d8ee33.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/47d30b5dd95e65e696fc9ff186d8ee33",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/47d30b5dd95e65e696fc9ff186d8ee33"
+      },
+      "hash": "47d30b5dd95e65e696fc9ff186d8ee33",
+      "count": 1
+    },
+    {
+      "name": "dB",
+      "texture": "https://laby.net/texture/image/e71149cdca1d763faf5d4549edc0620b.png",
+      "cropped_texture": "https://laby.net/texture/cape/e71149cdca1d763faf5d4549edc0620b.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/e71149cdca1d763faf5d4549edc0620b",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/e71149cdca1d763faf5d4549edc0620b"
+      },
+      "hash": "e71149cdca1d763faf5d4549edc0620b",
+      "count": 1
+    },
+    {
+      "name": "Translator (Chinese)",
+      "texture": "https://laby.net/texture/image/a2b113cab4c553b9b306f25e2d599513.png",
+      "cropped_texture": "https://laby.net/texture/cape/a2b113cab4c553b9b306f25e2d599513.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/a2b113cab4c553b9b306f25e2d599513",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/a2b113cab4c553b9b306f25e2d599513"
+      },
+      "hash": "a2b113cab4c553b9b306f25e2d599513",
+      "count": 3
+    },
+    {
+      "name": "Scrolls",
+      "texture": "https://laby.net/texture/image/1044b1f5dfc2626b573d8d74a9307a7f.png",
+      "cropped_texture": "https://laby.net/texture/cape/1044b1f5dfc2626b573d8d74a9307a7f.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/1044b1f5dfc2626b573d8d74a9307a7f",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/1044b1f5dfc2626b573d8d74a9307a7f"
+      },
+      "hash": "1044b1f5dfc2626b573d8d74a9307a7f",
+      "count": 5
+    },
+    {
+      "name": "Mojang Classic",
+      "texture": "https://laby.net/texture/image/7c07865bdc148efb0d1eb95829eaf11a.png",
+      "cropped_texture": "https://laby.net/texture/cape/7c07865bdc148efb0d1eb95829eaf11a.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/7c07865bdc148efb0d1eb95829eaf11a",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/7c07865bdc148efb0d1eb95829eaf11a"
+      },
+      "hash": "7c07865bdc148efb0d1eb95829eaf11a",
+      "count": 8
+    },
+    {
+      "name": "Prismarine",
+      "texture": "https://laby.net/texture/image/b32d8c1671c2936e81ec7e711e2af8e4.png",
+      "cropped_texture": "https://laby.net/texture/cape/b32d8c1671c2936e81ec7e711e2af8e4.png",
+      "cors": {
+        "texture": "https://api.gapple.pw/cors/laby/image/b32d8c1671c2936e81ec7e711e2af8e4",
+        "cropped_texture": "https://api.gapple.pw/cors/laby/cape/b32d8c1671c2936e81ec7e711e2af8e4"
+      },
+      "hash": "b32d8c1671c2936e81ec7e711e2af8e4",
+      "count": 1
+    }
+  ]
+}</code></pre>
+      </div>
+    </div>
+    <p>Copyright <a href="https://github.com/withdrew">Faav</a> 2021, all rights reserved.</p>
+  </body>
+</html>

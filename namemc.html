@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>docs for faav.gapple.pw | NameMC API</title>
+    <link href="https://cdn.jsdelivr.net/gh/KrauseFx/markdown-to-html-github-style@master/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1 id="namemc-api-routes">NameMC API Routes</h1>
+    <p>This API scrapes <a href="https://namemc.com/">NameMC</a> so it can break at any time. These docs aim to serve as a guide on how to use this API and what responses can possibly be returned.</p>
+    <h3 id="get-namemc-capes"><code>GET /namemc-capes</code></h3>
+    <p>This is currently the only endpoint for this API.</p>
+    <h3 id="possible-responses">Possible responses</h3>
+    <p>Here are the different responses that can be returned:</p>
+    <p><strong>Displays All Capes (Sorted by Cape Count from Highest to Lowest) / HTTP <code>200</code>:</strong></p>
+    <div>
+      <div>
+        <pre><code class="json language-json">{
+  "capes": [
+    {
+      "name": "Migrator",
+      "texture": "https://texture.namemc.com/8a/6c/8a6cc02cc86e43f1.png",
+      "hash": "8a6cc02cc86e43f1",
+      "count": 9150
+    },
+    {
+      "name": "MineCon 2016",
+      "texture": "https://texture.namemc.com/19/81/1981aad373fa9754.png",
+      "hash": "1981aad373fa9754",
+      "count": 7237
+    },
+    {
+      "name": "MineCon 2015",
+      "texture": "https://texture.namemc.com/72/ee/72ee2cfcefbfc081.png",
+      "hash": "72ee2cfcefbfc081",
+      "count": 6658
+    },
+    {
+      "name": "MineCon 2013",
+      "texture": "https://texture.namemc.com/0e/4c/0e4cc75a5f8a886d.png",
+      "hash": "0e4cc75a5f8a886d",
+      "count": 6033
+    },
+    {
+      "name": "MineCon 2012",
+      "texture": "https://texture.namemc.com/eb/c7/ebc798c3f7eca2a3.png",
+      "hash": "ebc798c3f7eca2a3",
+      "count": 3929
+    },
+    {
+      "name": "MineCon 2011",
+      "texture": "https://texture.namemc.com/93/49/9349fa25c64ae935.png",
+      "hash": "9349fa25c64ae935",
+      "count": 3417
+    },
+    {
+      "name": "Realms Mapmaker",
+      "texture": "https://texture.namemc.com/11/a3/11a3dcc4d826d0a1.png",
+      "hash": "11a3dcc4d826d0a1",
+      "count": 235
+    },
+    {
+      "name": "Mojang",
+      "texture": "https://texture.namemc.com/cb/5d/cb5dd34bee340182.png",
+      "hash": "cb5dd34bee340182",
+      "count": 184
+    },
+    {
+      "name": "Translator",
+      "texture": "https://texture.namemc.com/12/9a/129a4675704fa3b8.png",
+      "hash": "129a4675704fa3b8",
+      "count": 102
+    },
+    {
+      "name": "Mojira Moderator",
+      "texture": "https://texture.namemc.com/8d/d7/8dd71c1ee6ec0ae4.png",
+      "hash": "8dd71c1ee6ec0ae4",
+      "count": 50
+    },
+    {
+      "name": "Cobalt",
+      "texture": "https://texture.namemc.com/69/6b/696b6cc29946b968.png",
+      "hash": "696b6cc29946b968",
+      "count": 21
+    },
+    {
+      "name": "Mojang (Classic)",
+      "texture": "https://texture.namemc.com/29/8a/298ae017a64261ad.png",
+      "hash": "298ae017a64261ad",
+      "count": 16
+    },
+    {
+      "name": "Scrolls",
+      "texture": "https://texture.namemc.com/11/6b/116bacd62b233157.png",
+      "hash": "116bacd62b233157",
+      "count": 9
+    },
+    {
+      "name": "Mojang Studios",
+      "texture": "https://texture.namemc.com/c0/0d/c00df589ebea3ad6.png",
+      "hash": "c00df589ebea3ad6",
+      "count": 7
+    },
+    {
+      "name": "Translator (Chinese)",
+      "texture": "https://texture.namemc.com/d0/59/d059f1a18b159eb6.png",
+      "hash": "d059f1a18b159eb6",
+      "count": 3
+    },
+    {
+      "name": "Turtle",
+      "texture": "https://texture.namemc.com/8c/05/8c05ef3c54870d04.png",
+      "hash": "8c05ef3c54870d04",
+      "count": 2
+    },
+    {
+      "name": "Birthday",
+      "texture": "https://texture.namemc.com/aa/b5/aab5a23c7495fc70.png",
+      "hash": "aab5a23c7495fc70",
+      "count": 1
+    },
+    {
+      "name": "dB",
+      "texture": "https://texture.namemc.com/77/42/77421d9cf72e07e9.png",
+      "hash": "77421d9cf72e07e9",
+      "count": 1
+    },
+    {
+      "name": "Millionth Customer",
+      "texture": "https://texture.namemc.com/d3/c7/d3c7ac835b24eb29.png",
+      "hash": "d3c7ac835b24eb29",
+      "count": 1
+    },
+    {
+      "name": "Prismarine",
+      "texture": "https://texture.namemc.com/88/f1/88f1509813f4e324.png",
+      "hash": "88f1509813f4e324",
+      "count": 1
+    },
+    {
+      "name": "Snowman",
+      "texture": "https://texture.namemc.com/5e/68/5e68fa78bd9df310.png",
+      "hash": "5e68fa78bd9df310",
+      "count": 1
+    },
+    {
+      "name": "Spade",
+      "texture": "https://texture.namemc.com/7a/93/7a939dc1a7ad4505.png",
+      "hash": "7a939dc1a7ad4505",
+      "count": 1
+    },
+    {
+      "name": "Translator (Japanese)",
+      "texture": "https://texture.namemc.com/aa/02/aa02d4b62762ff22.png",
+      "hash": "aa02d4b62762ff22",
+      "count": 1
+    }
+  ]
+}</code></pre>
+      </div>
+    </div>
+    <p>Copyright <a href="https://github.com/withdrew">Faav</a> 2021, all rights reserved.</p>
+  </body>
+</html>

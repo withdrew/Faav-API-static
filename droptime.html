@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>docs for faav.gapple.pw | Drop Time API</title>
+    <link href="https://cdn.jsdelivr.net/gh/KrauseFx/markdown-to-html-github-style@master/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1 id="drop-time-api-routes">Drop Time API Routes</h1>
+    <p>This uses laby.net’s database so if a dropping name shows up as not dropping in the API its because laby.net hasn't cached the account that dropped the name. These docs aim to serve as a guide on how to use this API and what responses can possibly be returned.</p>
+    <h3 id="get-droptimeusername"><code>GET /droptime/:username</code></h3>
+    <p>This is currently the only endpoint for this API.</p>
+    <h3 id="possible-responses">Possible responses</h3>
+    <p>Here are the different responses that can be returned:</p>
+    <p><strong>Username Dropping Soon / HTTP <code>200</code>:</strong></p>
+    <div>
+      <div>
+        <pre><code class="json language-json">{
+  "status": "dropping",
+  "droptime": "2021-07-17T22:09:48.000Z"
+}</code></pre>
+      </div>
+    </div>
+    <p><strong>Username Not Dropping / HTTP <code>200</code>:</strong></p>
+    <div>
+      <div>
+        <pre><code class="json language-json">{
+  "status": "not_dropping"
+}</code></pre>
+      </div>
+    </div>
+    <p>Copyright <a href="https://github.com/withdrew">Faav</a> 2021, all rights reserved.</p>
+  </body>
+</html>
