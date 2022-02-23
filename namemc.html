@@ -9,7 +9,6 @@
     <h1 id="namemc-api-routes">NameMC API Routes</h1>
     <p>This API scrapes <a href="https://namemc.com/">NameMC</a> so it can break at any time. These docs aim to serve as a guide on how to use this API and what responses can possibly be returned.</p>
     <h3 id="get-namemc-capes"><code>GET /namemc-capes</code></h3>
-    <p>This is currently the only endpoint for this API.</p>
     <h3 id="possible-responses">Possible responses</h3>
     <p>Here are the different responses that can be returned:</p>
     <p><strong>Displays All Capes (Sorted by Cape Count from Highest to Lowest) / HTTP <code>200</code>:</strong></p>
@@ -157,6 +156,70 @@
     }
   ]
 }</code></pre>
+      </div>
+    <h3 id="get-namemc-capes"><code>GET /namemc-three</code></h3>
+    <h3 id="possible-responses">Possible responses</h3>
+    <p>Here are the different responses that can be returned:</p>
+    <p><strong>Displays All Capes (Sorted by Cape Count from Highest to Lowest) / HTTP <code>200</code>:</strong></p>
+    <div>
+      <div>
+        <pre><code class="json language-json">[
+  {
+    "username": "S62",
+    "droptime": "2022-02-16T02:19:29.000Z",
+    "unix": 1644977969000,
+    "searches": 76
+  },
+  {
+    "username": "Lak",
+    "droptime": "2022-02-16T05:11:33.000Z",
+    "unix": 1644988293000,
+    "searches": 1189
+  },
+  {
+    "username": "Qem",
+    "droptime": "2022-02-16T14:31:51.867Z",
+    "unix": 1645021911867,
+    "searches": 493
+  },
+  {
+    "username": "K58",
+    "droptime": "2022-02-16T17:03:53.137Z",
+    "unix": 1645031033137,
+    "searches": 32
+  },
+  {
+    "username": "i34",
+    "droptime": "2022-02-17T04:17:32.701Z",
+    "unix": 1645071452701,
+    "searches": 94
+  },
+  {
+    "username": "1GW",
+    "droptime": "2022-02-17T18:16:57.000Z",
+    "unix": 1645121817000,
+    "searches": 27
+  },
+  {
+    "username": "q9w",
+    "droptime": "2022-02-17T23:45:07.571Z",
+    "unix": 1645141507571,
+    "searches": 22
+  },
+  {
+    "username": "4NH",
+    "droptime": "2022-02-18T02:43:22.364Z",
+    "unix": 1645152202364,
+    "searches": 24
+  },
+  {
+    "username": "4hu",
+    "droptime": "2022-02-18T02:49:40.425Z",
+    "unix": 1645152580425,
+    "searches": 32
+  },
+ ...
+]</code></pre>
       </div>
     </div>
     <p>Copyright <a href="https://github.com/withdrew">Faav</a> 2021, all rights reserved.</p>
