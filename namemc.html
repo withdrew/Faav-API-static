@@ -238,6 +238,20 @@
 }</code></pre>
       </div>
     </div>
+<h3 id="get-namemc-capes"><code>GET /namemc-status/:username</code></h3>
+    <h3 id="possible-responses">Possible responses</h3>
+    <p>Here are the different responses that can be returned:</p>
+    <p><strong>Displays Status, Searches, and Droptime / HTTP <code>200</code>:</strong></p>
+    <div>
+      <div>
+        <pre><code class="json language-json">{"success": false, "error": "NameMC thinks this username is a server."}
+{"success": true, "status":"unavailable","droptime":null,"unix":null,"searches":20882}
+{"success": true, "status":"available_later","droptime":"2022-06-28T23:33:17.000Z","unix":1656459197000,"searches":4}
+{"success": true, "status":"too_short","droptime":null,"unix":null,"searches":4108}
+{"success": true, "status":"available","droptime":null,"unix":null,"searches":0}
+{"success": true, "status":"invalid_characters","droptime":null,"unix":null,"searches":1079}
+{"success": true, "status":"too_long","droptime":null,"unix":null,"searches":0}</code></pre>
+      </div>
     <p>Copyright <a href="https://github.com/withdrew">Faav</a> 2021, all rights reserved.</p>
   </body>
 </html>
